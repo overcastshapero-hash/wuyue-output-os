@@ -1,0 +1,11 @@
+{
+  "strong_relations": [
+    {
+      "from": "rjbys-workbench",
+      "to": "video-replicate",
+      "type": "workflow",
+      "note": "内容生产平台 + 视频复刻工具 = 完整短视频 + 长文生产工作流"
+    }
+  ],
+  "suggested_combinations": []
+}
