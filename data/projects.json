@@ -1,0 +1,62 @@
+[
+  {
+    "id": "rjbys-workbench",
+    "name": "rjbys-workbench",
+    "full_name": "overcastshapero-hash/rjbys-workbench",
+    "github_url": "https://github.com/overcastshapero-hash/rjbys-workbench",
+    "status": "active",
+    "role": "核心内容生产平台",
+    "description": "人间不延迟 · 内容工作台（AI 写作 + 工具集成）",
+    "tags": ["内容生产", "AI 工具链", "IP 运营", "写作系统"],
+    "tech": ["HTML", "JavaScript", "AI 集成", "工作流"],
+    "started": "2026-05",
+    "last_updated": "2026-06-01",
+    "related_writings": [],
+    "composition_potential": "极高"
+  },
+  {
+    "id": "video-replicate",
+    "name": "video-replicate",
+    "full_name": "overcastshapero-hash/video-replicate",
+    "github_url": "https://github.com/overcastshapero-hash/video-replicate",
+    "status": "active",
+    "role": "视频内容复刻工具",
+    "description": "把视频链接复刻成新视频的 Claude Code skill",
+    "tags": ["内容生产", "视频", "AI 工具", "视觉生成"],
+    "tech": ["Shell", "AI 视频", "工作流"],
+    "started": "2026-05",
+    "last_updated": "2026-06-01",
+    "related_writings": [],
+    "composition_potential": "高"
+  },
+  {
+    "id": "renjian-buyanchi-ai-kb-guide",
+    "name": "renjian-buyanchi-ai-kb-guide",
+    "full_name": "overcastshapero-hash/renjian-buyanchi-ai-kb-guide",
+    "github_url": "https://github.com/overcastshapero-hash/renjian-buyanchi-ai-kb-guide",
+    "status": "active",
+    "role": "IP 知识库指南",
+    "description": "人间不延迟 AI 知识库与方法论指南",
+    "tags": ["IP 运营", "知识管理", "方法论"],
+    "tech": ["HTML"],
+    "started": "2026-05",
+    "last_updated": "2026-05-11",
+    "related_writings": [],
+    "composition_potential": "中"
+  },
+  {
+    "id": "personal-site",
+    "name": "overcastshapero-hash.github.io",
+    "full_name": "overcastshapero-hash/overcastshapero-hash.github.io",
+    "github_url": "https://overcastshapero-hash.github.io",
+    "status": "active",
+    "role": "个人展示入口",
+    "description": "当前个人站点（将演进为本 Output OS）",
+    "tags": ["展示", "门户"],
+    "tech": ["HTML", "JavaScript"],
+    "started": "2026-04",
+    "last_updated": "2026-04-25",
+    "related_writings": [],
+    "composition_potential": "中"
+  }
+]
