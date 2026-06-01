@@ -1,0 +1,26 @@
+[
+  {
+    "id": "placeholder-01",
+    "title": "（待补充）人间不延迟第一篇正式长文标题",
+    "type": "人间不延迟长文",
+    "date": "2026-05-01",
+    "source": "iCloud Drive /人间不延迟/xxx.md",
+    "summary": "一句话核心观点（待填）",
+    "tags": ["反工具幻觉", "行动方法", "AI 时代"],
+    "projects_used": ["rjbys-workbench"],
+    "key_insights": ["待补充"],
+    "link": ""
+  },
+  {
+    "id": "placeholder-02",
+    "title": "（待补充）公众号文章标题",
+    "type": "公众号",
+    "date": "2026-05-15",
+    "source": "已发布链接或 iCloud",
+    "summary": "一句话核心观点（待填）",
+    "tags": ["内容生产", "IP 运营"],
+    "projects_used": ["rjbys-workbench"],
+    "key_insights": ["待补充"],
+    "link": ""
+  }
+]
