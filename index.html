@@ -80,9 +80,9 @@
       </div>
       
       <div class="flex items-center gap-8 text-sm">
-        <a href="#" class="nav-link text-[#888] hover:text-white">Projects</a>
-        <a href="#" class="nav-link text-[#888] hover:text-white">Writings</a>
-        <a href="#" class="nav-link text-[#888] hover:text-white">Compositions</a>
+        <a href="projects.html" class="nav-link text-[#888] hover:text-white">Projects</a>
+        <a href="writings.html" class="nav-link text-[#888] hover:text-white">Writings</a>
+        <a href="compositions.html" class="nav-link text-[#888] hover:text-white">Compositions</a>
         <div class="px-3 py-1.5 text-xs rounded border border-[#222] text-[#666] flex items-center gap-2">
           <i class="fa-solid fa-keyboard text-xs"></i>
           <span>⌘K</span>
@@ -114,8 +114,8 @@
         <div class="text-xs text-[#666] mt-1 tracking-widest">GITHUB PROJECTS</div>
       </div>
       <div>
-        <div class="text-4xl font-semibold tabular-nums">2</div>
-        <div class="text-xs text-[#666] mt-1 tracking-widest">WRITINGS (SEED)</div>
+        <div class="text-4xl font-semibold tabular-nums">4</div>
+        <div class="text-xs text-[#666] mt-1 tracking-widest">WRITINGS (已结构化)</div>
       </div>
       <div>
         <div class="text-4xl font-semibold tabular-nums">1</div>
@@ -131,7 +131,7 @@
     <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
       
       <!-- Projects -->
-      <a href="#" class="card rounded-2xl p-7 premium-shadow group">
+      <a href="projects.html" class="card rounded-2xl p-7 premium-shadow group">
         <div class="flex justify-between items-start mb-6">
           <div>
             <i class="fa-solid fa-folder text-2xl text-[#555]"></i>
@@ -143,19 +143,19 @@
       </a>
 
       <!-- Writings -->
-      <a href="#" class="card rounded-2xl p-7 premium-shadow group">
+      <a href="writings.html" class="card rounded-2xl p-7 premium-shadow group">
         <div class="flex justify-between items-start mb-6">
           <div>
             <i class="fa-solid fa-file-lines text-2xl text-[#555]"></i>
           </div>
-          <div class="text-[10px] px-2.5 py-0.5 rounded bg-[#1a1a1a] text-[#555] group-hover:text-white transition-colors">2</div>
+          <div class="text-[10px] px-2.5 py-0.5 rounded bg-[#1a1a1a] text-[#555] group-hover:text-white transition-colors">4</div>
         </div>
         <div class="text-xl font-semibold tracking-tight mb-2">Writings</div>
         <div class="text-sm text-[#777] leading-snug">人间不延迟长文、公众号、PDF 档案</div>
       </a>
 
       <!-- Compositions -->
-      <a href="#" class="card rounded-2xl p-7 premium-shadow group">
+      <a href="compositions.html" class="card rounded-2xl p-7 premium-shadow group">
         <div class="flex justify-between items-start mb-6">
           <div>
             <i class="fa-solid fa-link text-2xl text-[#555]"></i>
@@ -212,7 +212,6 @@
   </footer>
 
   <script>
-    // Simple tailwind script
     function initializeTailwind() {
       document.querySelectorAll('.card').forEach(card => {
         card.addEventListener('mouseenter', () => {
@@ -224,7 +223,6 @@
       });
     }
     
-    // Future: Command+K
     document.addEventListener('keydown', function(e) {
       if ((e.metaKey || e.ctrlKey) && e.key === 'k') {
         e.preventDefault();
