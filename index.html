@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Wuyue Output OS · 韩吴越</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&amp;family=Space+Grotesk:wght@500;600&amp;display=swap');
+    
+    :root {
+      --bg: #0a0a0a;
+      --card: #111111;
+      --border: #1f1f1f;
+    }
+    
+    body {
+      font-family: 'Inter', system-ui, sans-serif;
+    }
+    .font-display {
+      font-family: 'Space Grotesk', 'Inter', sans-serif;
+      font-weight: 600;
+      letter-spacing: -0.02em;
+    }
+
+    .section-title {
+      font-size: 13px;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      font-weight: 500;
+      color: #666;
+    }
+
+    .card {
+      background-color: #111111;
+      border: 1px solid #1f1f1f;
+      transition: all 0.2s cubic-bezier(0.23, 1, 0.32, 1);
+    }
+    .card:hover {
+      border-color: #333;
+      transform: translateY(-1px);
+    }
+
+    .subtle-grid {
+      background-image: 
+        linear-gradient(#1f1f1f 1px, transparent 1px),
+        linear-gradient(90deg, #1f1f1f 1px, transparent 1px);
+      background-size: 48px 48px;
+      opacity: 0.35;
+    }
+
+    .stat-number {
+      font-variant-numeric: tabular-nums;
+    }
+
+    .nav-link {
+      transition: color 0.1s ease;
+    }
+    .nav-link:hover {
+      color: #fff;
+    }
+
+    .premium-shadow {
+      box-shadow: 0 10px 30px -15px rgb(0 0 0 / 0.3);
+    }
+  </style>
+</head>
+<body class="bg-[#0a0a0a] text-[#e5e5e5] antialiased">
+  <!-- Top Nav -->
+  <nav class="border-b border-[#1f1f1f]">
+    <div class="max-w-7xl mx-auto px-8 flex items-center justify-between h-16">
+      <div class="flex items-center gap-3">
+        <div class="w-8 h-8 rounded bg-white flex items-center justify-center">
+          <span class="text-black text-sm font-semibold tracking-tighter">W</span>
+        </div>
+        <div>
+          <span class="font-semibold tracking-tight">Wuyue Output OS</span>
+        </div>
+      </div>
+      
+      <div class="flex items-center gap-8 text-sm">
+        <a href="#" class="nav-link text-[#888] hover:text-white">Projects</a>
+        <a href="#" class="nav-link text-[#888] hover:text-white">Writings</a>
+        <a href="#" class="nav-link text-[#888] hover:text-white">Compositions</a>
+        <div class="px-3 py-1.5 text-xs rounded border border-[#222] text-[#666] flex items-center gap-2">
+          <i class="fa-solid fa-keyboard text-xs"></i>
+          <span>⌘K</span>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Hero / Command Center -->
+  <div class="max-w-5xl mx-auto px-8 pt-20 pb-16">
+    <div class="max-w-3xl">
+      <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-[#111] border border-[#222] text-xs tracking-[0.5px] text-[#888] mb-6">
+        <div class="w-1.5 h-1.5 bg-emerald-400 rounded-full animate-pulse"></div>
+        输出系统 · v0.1
+      </div>
+
+      <h1 class="text-6xl font-semibold tracking-tighter leading-none font-display mb-4">
+        个人输出<br>操作系统
+      </h1>
+      <p class="text-2xl text-[#888] tracking-tight max-w-md">
+        韩吴越 · 系统地看见自己做了什么、能做什么
+      </p>
+    </div>
+
+    <!-- Quick Stats -->
+    <div class="flex gap-8 mt-12">
+      <div>
+        <div class="text-4xl font-semibold tabular-nums">4</div>
+        <div class="text-xs text-[#666] mt-1 tracking-widest">GITHUB PROJECTS</div>
+      </div>
+      <div>
+        <div class="text-4xl font-semibold tabular-nums">2</div>
+        <div class="text-xs text-[#666] mt-1 tracking-widest">WRITINGS (SEED)</div>
+      </div>
+      <div>
+        <div class="text-4xl font-semibold tabular-nums">1</div>
+        <div class="text-xs text-[#666] mt-1 tracking-widest">VERIFIED WORKFLOW</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Four Pillars -->
+  <div class="max-w-7xl mx-auto px-8 pb-20">
+    <div class="section-title mb-4 px-1">核心板块</div>
+    
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
+      
+      <!-- Projects -->
+      <a href="#" class="card rounded-2xl p-7 premium-shadow group">
+        <div class="flex justify-between items-start mb-6">
+          <div>
+            <i class="fa-solid fa-folder text-2xl text-[#555]"></i>
+          </div>
+          <div class="text-[10px] px-2.5 py-0.5 rounded bg-[#1a1a1a] text-[#555] group-hover:text-white transition-colors">4</div>
+        </div>
+        <div class="text-xl font-semibold tracking-tight mb-2">Projects</div>
+        <div class="text-sm text-[#777] leading-snug">GitHub 上的正式项目与能力沉淀</div>
+      </a>
+
+      <!-- Writings -->
+      <a href="#" class="card rounded-2xl p-7 premium-shadow group">
+        <div class="flex justify-between items-start mb-6">
+          <div>
+            <i class="fa-solid fa-file-lines text-2xl text-[#555]"></i>
+          </div>
+          <div class="text-[10px] px-2.5 py-0.5 rounded bg-[#1a1a1a] text-[#555] group-hover:text-white transition-colors">2</div>
+        </div>
+        <div class="text-xl font-semibold tracking-tight mb-2">Writings</div>
+        <div class="text-sm text-[#777] leading-snug">人间不延迟长文、公众号、PDF 档案</div>
+      </a>
+
+      <!-- Compositions -->
+      <a href="#" class="card rounded-2xl p-7 premium-shadow group">
+        <div class="flex justify-between items-start mb-6">
+          <div>
+            <i class="fa-solid fa-link text-2xl text-[#555]"></i>
+          </div>
+          <div class="text-[10px] px-2.5 py-0.5 rounded bg-[#1a1a1a] text-[#555] group-hover:text-white transition-colors">1</div>
+        </div>
+        <div class="text-xl font-semibold tracking-tight mb-2">Compositions</div>
+        <div class="text-sm text-[#777] leading-snug">项目与内容的智能连接与复利工作流</div>
+      </a>
+
+      <!-- Graph / System -->
+      <a href="#" class="card rounded-2xl p-7 premium-shadow group">
+        <div class="flex justify-between items-start mb-6">
+          <div>
+            <i class="fa-solid fa-project-diagram text-2xl text-[#555]"></i>
+          </div>
+        </div>
+        <div class="text-xl font-semibold tracking-tight mb-2">System Graph</div>
+        <div class="text-sm text-[#777] leading-snug">所有产出之间的关系密度与时间线</div>
+      </a>
+
+    </div>
+  </div>
+
+  <!-- Current Status -->
+  <div class="max-w-7xl mx-auto px-8 pb-24">
+    <div class="border border-[#1f1f1f] rounded-2xl p-8 bg-[#111] flex flex-col md:flex-row gap-8 items-start">
+      <div class="flex-1">
+        <div class="section-title mb-3">当前状态</div>
+        <div class="text-lg">这是一个早期但可扩展的系统骨架。</div>
+        <div class="text-[#777] mt-2 text-[15px] leading-relaxed max-w-md">
+          数据全部来自 GitHub 项目 + 你在 iCloud「人间不延迟」文件夹里的真实写作。
+          正在逐步填充真实内容与连接。
+        </div>
+      </div>
+      <div>
+        <a href="https://github.com/overcastshapero-hash/wuyue-output-os" target="_blank"
+           class="inline-flex items-center gap-2 px-5 py-3 rounded-xl bg-white text-black text-sm font-medium hover:bg-neutral-200 transition-colors">
+          <i class="fa-brands fa-github"></i>
+          <span>查看 GitHub 仓库</span>
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <footer class="border-t border-[#1f1f1f] py-6 text-xs text-[#555]">
+    <div class="max-w-7xl mx-auto px-8 flex justify-between items-center">
+      <div>韩吴越 · 2026</div>
+      <div class="flex gap-5">
+        <a href="https://github.com/overcastshapero-hash/wuyue-output-os" class="hover:text-white transition-colors">GitHub</a>
+        <a href="#" class="hover:text-white transition-colors">Raw Data</a>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    // Simple tailwind script
+    function initializeTailwind() {
+      document.querySelectorAll('.card').forEach(card => {
+        card.addEventListener('mouseenter', () => {
+          card.style.borderColor = '#333';
+        });
+        card.addEventListener('mouseleave', () => {
+          card.style.borderColor = '#1f1f1f';
+        });
+      });
+    }
+    
+    // Future: Command+K
+    document.addEventListener('keydown', function(e) {
+      if ((e.metaKey || e.ctrlKey) && e.key === 'k') {
+        e.preventDefault();
+        alert('Command+K 搜索功能将在下一阶段实现');
+      }
+    });
+
+    window.onload = initializeTailwind;
+  </script>
+</body>
+</html>
