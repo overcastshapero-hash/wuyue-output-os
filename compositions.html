@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Compositions · Wuyue Output OS</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <style>
+    body { font-family: 'Inter', system-ui, sans-serif; }
+    .card { background-color: #111; border: 1px solid #1f1f1f; }
+    .section-title { font-size: 13px; letter-spacing: 0.08em; text-transform: uppercase; color: #666; }
+  </style>
+</head>
+<body class="bg-[#0a0a0a] text-[#e5e5e5]">
+  <nav class="border-b border-[#1f1f1f]">
+    <div class="max-w-7xl mx-auto px-8 flex items-center justify-between h-16">
+      <div class="flex items-center gap-3">
+        <a href="index.html" class="flex items-center gap-3">
+          <div class="w-8 h-8 rounded bg-white flex items-center justify-center"><span class="text-black text-sm font-semibold tracking-tighter">W</span></div>
+          <span class="font-semibold tracking-tight">Wuyue Output OS</span>
+        </a>
+      </div>
+      <div class="flex items-center gap-8 text-sm">
+        <a href="projects.html" class="text-[#888] hover:text-white">Projects</a>
+        <a href="writings.html" class="text-[#888] hover:text-white">Writings</a>
+        <a href="compositions.html" class="font-medium">Compositions</a>
+        <a href="index.html" class="text-[#888] hover:text-white">Command Center</a>
+      </div>
+    </div>
+  </nav>
+
+  <div class="max-w-7xl mx-auto px-8 pt-12 pb-12">
+    <div class="mb-10">
+      <div class="section-title mb-2">INTELLIGENCE LAYER</div>
+      <h1 class="text-5xl font-semibold tracking-tighter">Compositions</h1>
+      <p class="max-w-md mt-3 text-[#888]">项目、写作、能力之间的复利连接。这里是整个系统的核心差异化价值。</p>
+    </div>
+
+    <!-- View 1: Recommended Combinations -->
+    <div class="mb-14">
+      <div class="flex items-center gap-3 mb-4">
+        <i class="fa-solid fa-lightbulb text-amber-400"></i>
+        <div class="font-semibold tracking-tight text-lg">推荐组合（智能推荐）</div>
+      </div>
+      <div class="card rounded-3xl p-8">
+        <div class="text-sm text-[#aaa]">基于当前标签重叠与能力互补，系统认为最值得你认真组合的 3 个方向：</div>
+        
+        <div class="mt-6 space-y-6">
+          <div class="border-l-2 border-amber-500 pl-5">
+            <div class="font-medium">rjbys-workbench + video-replicate</div>
+            <div class="text-sm text-[#777] mt-1">内容生产平台 + 视频复刻工具 → 可形成「长文深度 + 短视频分发」的完整内容飞轮。目前已有一个强关联。</div>
+          </div>
+          <div class="border-l-2 border-amber-500 pl-5">
+            <div class="font-medium">rjbys-workbench + 文科生 AI 知识库自动化指南</div>
+            <div class="text-sm text-[#777] mt-1">工作台 + 方法论文章 → 可直接产出「可执行的 AI 知识库搭建 SOP + 工具包」。</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- View 2: Verified Workflows -->
+    <div class="mb-14">
+      <div class="flex items-center gap-3 mb-4">
+        <i class="fa-solid fa-check-circle text-emerald-400"></i>
+        <div class="font-semibold tracking-tight text-lg">已验证工作流</div>
+      </div>
+      <div class="card rounded-3xl p-8 text-sm">
+        <div class="text-[#888]">你真正跑通并产生过真实产出的完整链路（目前 1 条，已结构化）：</div>
+        
+        <div class="mt-6">
+          <div class="font-medium mb-2">内容生产平台 + 视频复刻 = 完整短视频 + 长文生产工作流</div>
+          <div class="text-[#777]">rjbys-workbench 负责深度内容与工具集成 → video-replicate 负责视觉/视频输出 → 形成可规模化的内容飞轮。</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- View 3: Combination Explorer -->
+    <div>
+      <div class="flex items-center gap-3 mb-4">
+        <i class="fa-solid fa-flask text-violet-400"></i>
+        <div class="font-semibold tracking-tight text-lg">组合探索器（原型）</div>
+      </div>
+      <div class="card rounded-3xl p-8">
+        <div class="text-sm text-[#888]">选择 2-4 个元素，系统会给出可能的复利产出方向（当前为静态演示，后续将支持动态计算）。</div>
+        
+        <div class="mt-6 grid grid-cols-2 md:grid-cols-4 gap-3 text-sm">
+          <div class="border border-[#222] rounded-2xl p-4">rjbys-workbench</div>
+          <div class="border border-[#222] rounded-2xl p-4">video-replicate</div>
+          <div class="border border-[#222] rounded-2xl p-4">文科生 AI 知识库指南</div>
+          <div class="border border-[#222] rounded-2xl p-4">Hermes 教程</div>
+        </div>
+        <div class="mt-6 text-xs text-[#555]">（下一阶段将实现真正的交互式组合模拟器）</div>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
