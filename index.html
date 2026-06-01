@@ -9,228 +9,393 @@
   <style>
     @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&amp;family=Space+Grotesk:wght@500;600&amp;display=swap');
     
-    :root {
-      --bg: #0a0a0a;
-      --card: #111111;
-      --border: #1f1f1f;
-    }
-    
     body {
-      font-family: 'Inter', system-ui, sans-serif;
+      font-family: 'Inter', system-ui, -apple-system, sans-serif;
     }
     .font-display {
       font-family: 'Space Grotesk', 'Inter', sans-serif;
       font-weight: 600;
-      letter-spacing: -0.02em;
+      letter-spacing: -0.025em;
     }
 
-    .section-title {
-      font-size: 13px;
-      letter-spacing: 0.08em;
-      text-transform: uppercase;
-      font-weight: 500;
-      color: #666;
+    :root {
+      --bg: #0a0a0a;
+      --surface: #111111;
+      --border: #1f1f1f;
     }
 
-    .card {
-      background-color: #111111;
+    .nav-active {
+      color: #fff;
+      border-bottom: 2px solid #fff;
+    }
+
+    .section {
+      scroll-margin-top: 80px;
+    }
+
+    .os-card {
+      background-color: #111;
       border: 1px solid #1f1f1f;
       transition: all 0.2s cubic-bezier(0.23, 1, 0.32, 1);
     }
-    .card:hover {
+    .os-card:hover {
       border-color: #333;
-      transform: translateY(-1px);
+      box-shadow: 0 10px 30px -15px rgb(0 0 0 / 0.4);
     }
 
-    .subtle-grid {
-      background-image: 
-        linear-gradient(#1f1f1f 1px, transparent 1px),
-        linear-gradient(90deg, #1f1f1f 1px, transparent 1px);
-      background-size: 48px 48px;
-      opacity: 0.35;
+    .premium {
+      box-shadow: 0 20px 60px -15px rgb(0 0 0 / 0.5);
     }
 
-    .stat-number {
-      font-variant-numeric: tabular-nums;
+    .tag {
+      font-size: 11px;
+      padding: 2px 10px;
+      background: #1a1a1a;
+      color: #888;
+      border-radius: 999px;
+      display: inline-block;
     }
 
-    .nav-link {
-      transition: color 0.1s ease;
+    .system-text {
+      color: #888;
     }
-    .nav-link:hover {
+
+    .nav {
+      transition: all 0.1s ease;
+    }
+
+    .nav:hover {
       color: #fff;
     }
 
-    .premium-shadow {
-      box-shadow: 0 10px 30px -15px rgb(0 0 0 / 0.3);
+    .section-header {
+      font-size: 13px;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: #555;
+      font-weight: 500;
+    }
+
+    .os-grid {
+      background-image: 
+        linear-gradient(#1f1f1f 1px, transparent 1px),
+        linear-gradient(90deg, #1f1f1f 1px, transparent 1px);
+      background-size: 56px 56px;
+      opacity: 0.2;
     }
   </style>
 </head>
 <body class="bg-[#0a0a0a] text-[#e5e5e5] antialiased">
-  <!-- Top Nav -->
-  <nav class="border-b border-[#1f1f1f]">
-    <div class="max-w-7xl mx-auto px-8 flex items-center justify-between h-16">
+
+  <!-- Fixed Top Navigation -->
+  <nav class="fixed top-0 left-0 right-0 z-50 bg-[#0a0a0a]/95 backdrop-blur-md border-b border-[#1f1f1f]">
+    <div class="max-w-7xl mx-auto px-8 flex items-center justify-between h-14">
       <div class="flex items-center gap-3">
-        <div class="w-8 h-8 rounded bg-white flex items-center justify-center">
-          <span class="text-black text-sm font-semibold tracking-tighter">W</span>
+        <div class="w-7 h-7 rounded bg-white flex items-center justify-center">
+          <span class="text-black text-xs font-bold tracking-tighter">WO</span>
         </div>
-        <div>
-          <span class="font-semibold tracking-tight">Wuyue Output OS</span>
+        <div class="font-semibold tracking-tight text-lg">Wuyue Output OS</div>
+      </div>
+
+      <div class="flex items-center gap-8 text-sm">
+        <a href="#command" class="nav text-[#888] hover:text-white">Command</a>
+        <a href="#projects" class="nav text-[#888] hover:text-white">Projects</a>
+        <a href="#writings" class="nav text-[#888] hover:text-white">Writings</a>
+        <a href="#compositions" class="nav text-[#888] hover:text-white">Compositions</a>
+        <div onclick="showCommandPalette()" 
+             class="flex items-center gap-2 px-3 py-1.5 text-xs rounded-lg border border-[#222] text-[#666] hover:text-white hover:border-[#444] cursor-pointer">
+          <i class="fa-solid fa-search"></i>
+          <span>Search</span>
+          <span class="ml-1 text-[10px] opacity-60">⌘K</span>
         </div>
       </div>
-      
-      <div class="flex items-center gap-8 text-sm">
-        <a href="projects.html" class="nav-link text-[#888] hover:text-white">Projects</a>
-        <a href="writings.html" class="nav-link text-[#888] hover:text-white">Writings</a>
-        <a href="compositions.html" class="nav-link text-[#888] hover:text-white">Compositions</a>
-        <div class="px-3 py-1.5 text-xs rounded border border-[#222] text-[#666] flex items-center gap-2">
-          <i class="fa-solid fa-keyboard text-xs"></i>
-          <span>⌘K</span>
-        </div>
+
+      <div class="text-xs text-[#555]">
+        韩吴越 · 2026
       </div>
     </div>
   </nav>
 
-  <!-- Hero / Command Center -->
-  <div class="max-w-5xl mx-auto px-8 pt-20 pb-16">
+  <!-- HERO / COMMAND CENTER -->
+  <div id="command" class="pt-20 pb-16 max-w-5xl mx-auto px-8">
     <div class="max-w-3xl">
-      <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-[#111] border border-[#222] text-xs tracking-[0.5px] text-[#888] mb-6">
-        <div class="w-1.5 h-1.5 bg-emerald-400 rounded-full animate-pulse"></div>
-        输出系统 · v0.1
+      <div class="inline-flex items-center gap-2 px-4 py-1 rounded-full bg-[#111] border border-[#222] text-xs tracking-[1px] text-[#666] mb-8">
+        <div class="w-2 h-2 bg-emerald-400 rounded-full animate-pulse"></div>
+        PERSONAL OUTPUT SYSTEM · v0.2
       </div>
 
-      <h1 class="text-6xl font-semibold tracking-tighter leading-none font-display mb-4">
+      <h1 class="text-[68px] leading-[1.05] font-semibold tracking-[-2.5px] font-display mb-6">
         个人输出<br>操作系统
       </h1>
-      <p class="text-2xl text-[#888] tracking-tight max-w-md">
-        韩吴越 · 系统地看见自己做了什么、能做什么
+      
+      <p class="text-2xl text-[#888] tracking-tight max-w-lg">
+        系统地看见自己做了什么、能做什么。
       </p>
     </div>
 
-    <!-- Quick Stats -->
-    <div class="flex gap-8 mt-12">
+    <div class="mt-12 flex gap-10 text-sm">
       <div>
-        <div class="text-4xl font-semibold tabular-nums">4</div>
-        <div class="text-xs text-[#666] mt-1 tracking-widest">GITHUB PROJECTS</div>
+        <div class="text-5xl font-semibold tabular-nums tracking-tighter">4</div>
+        <div class="text-[#555] text-xs mt-1 tracking-[1px]">GITHUB PROJECTS</div>
       </div>
       <div>
-        <div class="text-4xl font-semibold tabular-nums">4</div>
-        <div class="text-xs text-[#666] mt-1 tracking-widest">WRITINGS (已结构化)</div>
+        <div class="text-5xl font-semibold tabular-nums tracking-tighter">4</div>
+        <div class="text-[#555] text-xs mt-1 tracking-[1px]">STRUCTURED WRITINGS</div>
       </div>
       <div>
-        <div class="text-4xl font-semibold tabular-nums">1</div>
-        <div class="text-xs text-[#666] mt-1 tracking-widest">VERIFIED WORKFLOW</div>
+        <div class="text-5xl font-semibold tabular-nums tracking-tighter">1</div>
+        <div class="text-[#555] text-xs mt-1 tracking-[1px]">VERIFIED WORKFLOW</div>
       </div>
     </div>
   </div>
 
-  <!-- Four Pillars -->
-  <div class="max-w-7xl mx-auto px-8 pb-20">
-    <div class="section-title mb-4 px-1">核心板块</div>
-    
-    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
+  <!-- PROJECTS -->
+  <div id="projects" class="max-w-7xl mx-auto px-8 pt-8 pb-16 border-t border-[#1f1f1f] section">
+    <div class="flex items-baseline justify-between mb-8">
+      <div>
+        <div class="section-header mb-2">01 · ARCHIVE</div>
+        <h2 class="text-4xl font-semibold tracking-tighter">Projects</h2>
+      </div>
+      <div class="text-xs text-[#555]">Only GitHub formal projects</div>
+    </div>
+
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-5">
       
-      <!-- Projects -->
-      <a href="projects.html" class="card rounded-2xl p-7 premium-shadow group">
-        <div class="flex justify-between items-start mb-6">
+      <!-- Project Cards -->
+      <div class="os-card rounded-3xl p-8 cursor-pointer" onclick="showProjectDetail(0)">
+        <div class="flex justify-between items-start">
           <div>
-            <i class="fa-solid fa-folder text-2xl text-[#555]"></i>
+            <div class="font-semibold text-xl tracking-tight">rjbys-workbench</div>
+            <div class="text-[#666] text-sm mt-0.5">核心内容生产平台</div>
           </div>
-          <div class="text-[10px] px-2.5 py-0.5 rounded bg-[#1a1a1a] text-[#555] group-hover:text-white transition-colors">4</div>
+          <div class="text-emerald-400 text-xs font-medium px-3 py-1 rounded-full bg-emerald-950/60">极高复利潜力</div>
         </div>
-        <div class="text-xl font-semibold tracking-tight mb-2">Projects</div>
-        <div class="text-sm text-[#777] leading-snug">GitHub 上的正式项目与能力沉淀</div>
-      </a>
+        <div class="mt-5 text-sm text-[#aaa] leading-snug">人间不延迟 · 内容工作台。AI 写作与工具集成的最成体系项目。</div>
+        <div class="mt-6 flex gap-2 flex-wrap">
+          <span class="tag">内容生产</span>
+          <span class="tag">AI 工具链</span>
+          <span class="tag">IP 运营</span>
+        </div>
+      </div>
 
-      <!-- Writings -->
-      <a href="writings.html" class="card rounded-2xl p-7 premium-shadow group">
-        <div class="flex justify-between items-start mb-6">
+      <div class="os-card rounded-3xl p-8 cursor-pointer" onclick="showProjectDetail(1)">
+        <div class="flex justify-between items-start">
           <div>
-            <i class="fa-solid fa-file-lines text-2xl text-[#555]"></i>
+            <div class="font-semibold text-xl tracking-tight">video-replicate</div>
+            <div class="text-[#666] text-sm mt-0.5">视频内容复刻工具</div>
           </div>
-          <div class="text-[10px] px-2.5 py-0.5 rounded bg-[#1a1a1a] text-[#555] group-hover:text-white transition-colors">4</div>
+          <div class="text-amber-400 text-xs font-medium px-3 py-1 rounded-full bg-amber-950/60">高复利潜力</div>
         </div>
-        <div class="text-xl font-semibold tracking-tight mb-2">Writings</div>
-        <div class="text-sm text-[#777] leading-snug">人间不延迟长文、公众号、PDF 档案</div>
-      </a>
+        <div class="mt-5 text-sm text-[#aaa] leading-snug">把视频链接复刻成新视频的 Claude Code skill。视觉生成能力的重要补充。</div>
+        <div class="mt-6 flex gap-2 flex-wrap">
+          <span class="tag">内容生产</span>
+          <span class="tag">视频</span>
+          <span class="tag">AI 工具</span>
+        </div>
+      </div>
 
-      <!-- Compositions -->
-      <a href="compositions.html" class="card rounded-2xl p-7 premium-shadow group">
-        <div class="flex justify-between items-start mb-6">
+      <div class="os-card rounded-3xl p-8 cursor-pointer" onclick="showProjectDetail(2)">
+        <div class="flex justify-between items-start">
           <div>
-            <i class="fa-solid fa-link text-2xl text-[#555]"></i>
+            <div class="font-semibold text-xl tracking-tight">renjian-buyanchi-ai-kb-guide</div>
+            <div class="text-[#666] text-sm mt-0.5">IP 知识库指南</div>
           </div>
-          <div class="text-[10px] px-2.5 py-0.5 rounded bg-[#1a1a1a] text-[#555] group-hover:text-white transition-colors">1</div>
+          <div class="text-[#555] text-xs font-medium px-3 py-1 rounded-full bg-[#1a1a1a]">中级</div>
         </div>
-        <div class="text-xl font-semibold tracking-tight mb-2">Compositions</div>
-        <div class="text-sm text-[#777] leading-snug">项目与内容的智能连接与复利工作流</div>
-      </a>
+        <div class="mt-5 text-sm text-[#aaa] leading-snug">人间不延迟 AI 知识库与方法论指南。方法论沉淀。</div>
+        <div class="mt-6 flex gap-2 flex-wrap">
+          <span class="tag">IP 运营</span>
+          <span class="tag">知识管理</span>
+        </div>
+      </div>
 
-      <!-- Graph / System -->
-      <a href="#" class="card rounded-2xl p-7 premium-shadow group">
-        <div class="flex justify-between items-start mb-6">
+      <div class="os-card rounded-3xl p-8 cursor-pointer" onclick="showProjectDetail(3)">
+        <div class="flex justify-between items-start">
           <div>
-            <i class="fa-solid fa-project-diagram text-2xl text-[#555]"></i>
+            <div class="font-semibold text-xl tracking-tight">overcastshapero-hash.github.io</div>
+            <div class="text-[#666] text-sm mt-0.5">个人展示入口</div>
           </div>
+          <div class="text-[#555] text-xs font-medium px-3 py-1 rounded-full bg-[#1a1a1a]">中级</div>
         </div>
-        <div class="text-xl font-semibold tracking-tight mb-2">System Graph</div>
-        <div class="text-sm text-[#777] leading-snug">所有产出之间的关系密度与时间线</div>
-      </a>
+        <div class="mt-5 text-sm text-[#aaa] leading-snug">当前个人站点。正在演进为 Wuyue Output OS 本身。</div>
+        <div class="mt-6 flex gap-2 flex-wrap">
+          <span class="tag">展示</span>
+          <span class="tag">门户</span>
+        </div>
+      </div>
 
     </div>
   </div>
 
-  <!-- Current Status -->
-  <div class="max-w-7xl mx-auto px-8 pb-24">
-    <div class="border border-[#1f1f1f] rounded-2xl p-8 bg-[#111] flex flex-col md:flex-row gap-8 items-start">
-      <div class="flex-1">
-        <div class="section-title mb-3">当前状态</div>
-        <div class="text-lg">这是一个早期但可扩展的系统骨架。</div>
-        <div class="text-[#777] mt-2 text-[15px] leading-relaxed max-w-md">
-          数据全部来自 GitHub 项目 + 你在 iCloud「人间不延迟」文件夹里的真实写作。
-          正在逐步填充真实内容与连接。
-        </div>
+  <!-- WRITINGS -->
+  <div id="writings" class="max-w-7xl mx-auto px-8 pt-4 pb-16 border-t border-[#1f1f1f] section">
+    <div class="mb-8">
+      <div class="section-header mb-2">02 · ARCHIVE</div>
+      <h2 class="text-4xl font-semibold tracking-tighter">Writings</h2>
+    </div>
+
+    <div class="space-y-4 max-w-4xl">
+      <div class="os-card rounded-2xl p-6">
+        <div class="text-sm font-medium">文科生 AI 知识库自动化指南 · 人间不延迟 v2</div>
+        <div class="text-xs text-[#666] mt-1">人间不延迟长文 · 2026-05</div>
+        <div class="mt-3 text-sm text-[#aaa]">面向文科生/普通人的 AI 知识库搬建与自动化方法论指南</div>
       </div>
-      <div>
-        <a href="https://github.com/overcastshapero-hash/wuyue-output-os" target="_blank"
-           class="inline-flex items-center gap-2 px-5 py-3 rounded-xl bg-white text-black text-sm font-medium hover:bg-neutral-200 transition-colors">
-          <i class="fa-brands fa-github"></i>
-          <span>查看 GitHub 仓库</span>
-        </a>
+      
+      <div class="os-card rounded-2xl p-6">
+        <div class="text-sm font-medium">每天早上我都会先跟Hermes打个招呼 - Hermes零基础安装配置教程</div>
+        <div class="text-xs text-[#666] mt-1">人间不延迟长文 · 2026-05</div>
+      </div>
+
+      <div class="os-card rounded-2xl p-6">
+        <div class="text-sm font-medium">人生正向复利完整体系——从底层逻辑到落地执行的全链路多学科阐释</div>
+        <div class="text-xs text-[#666] mt-1">读书笔记 / 合成 · 2026-03</div>
       </div>
     </div>
   </div>
 
-  <footer class="border-t border-[#1f1f1f] py-6 text-xs text-[#555]">
-    <div class="max-w-7xl mx-auto px-8 flex justify-between items-center">
-      <div>韩吴越 · 2026</div>
-      <div class="flex gap-5">
-        <a href="https://github.com/overcastshapero-hash/wuyue-output-os" class="hover:text-white transition-colors">GitHub</a>
-        <a href="#" class="hover:text-white transition-colors">Raw Data</a>
+  <!-- COMPOSITIONS -->
+  <div id="compositions" class="max-w-7xl mx-auto px-8 pt-4 pb-20 border-t border-[#1f1f1f] section">
+    <div class="mb-8">
+      <div class="section-header mb-2">03 · INTELLIGENCE LAYER</div>
+      <h2 class="text-4xl font-semibold tracking-tighter">Compositions</h2>
+      <p class="text-[#888] max-w-md mt-2">项目与写作之间的复利连接。这是整个系统的核心价值。</p>
+    </div>
+
+    <!-- Verified Workflow -->
+    <div class="mb-10">
+      <div class="text-sm font-medium text-emerald-400 mb-3 flex items-center gap-2">
+        <i class="fa-solid fa-check"></i> 已验证工作流
+      </div>
+      <div class="os-card rounded-3xl p-7">
+        <div class="font-medium">rjbys-workbench + video-replicate</div>
+        <div class="text-sm mt-2 text-[#aaa]">内容生产平台 + 视频复刻工具 → 形成「深度长文 + 短视频分发」的完整内容飞轮。</div>
       </div>
     </div>
+
+    <!-- Recommended -->
+    <div class="mb-10">
+      <div class="text-sm font-medium text-amber-400 mb-3 flex items-center gap-2">
+        <i class="fa-solid fa-lightbulb"></i> 智能推荐组合
+      </div>
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+        <div class="os-card rounded-2xl p-6">
+          rjbys-workbench + 文科生 AI 知识库指南<br>
+          <span class="text-xs text-[#777]">可直接产出可执行的 AI 知识库搬建 SOP + 工具包</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Explorer -->
+    <div>
+      <div class="text-sm font-medium text-violet-400 mb-3 flex items-center gap-2">
+        <i class="fa-solid fa-flask"></i> 组合探索器
+      </div>
+      <div class="os-card rounded-3xl p-7">
+        <div class="text-sm mb-4 text-[#888]">选择元素，系统提示复利可能性（当前为静态示例）</div>
+        
+        <div class="flex flex-wrap gap-3" id="explorer-options">
+          <div onclick="toggleSelection(this, 'rjbys-workbench')" class="cursor-pointer px-4 py-2 text-sm border border-[#222] rounded-2xl hover:bg-[#1a1a1a] explorer-item">rjbys-workbench</div>
+          <div onclick="toggleSelection(this, 'video-replicate')" class="cursor-pointer px-4 py-2 text-sm border border-[#222] rounded-2xl hover:bg-[#1a1a1a] explorer-item">video-replicate</div>
+          <div onclick="toggleSelection(this, 'ai-kb-guide')" class="cursor-pointer px-4 py-2 text-sm border border-[#222] rounded-2xl hover:bg-[#1a1a1a] explorer-item">文科生 AI 知识库指南</div>
+        </div>
+
+        <div id="explorer-result" class="mt-6 min-h-[60px] text-sm text-[#888]"></div>
+      </div>
+    </div>
+  </div>
+
+  <footer class="border-t border-[#1f1f1f] py-8 text-xs text-[#555] max-w-7xl mx-auto px-8">
+    韩吴越 · 个人输出系统 · 2026
   </footer>
 
+  <!-- Project Detail Modal -->
+  <div id="project-modal" onclick="if (event.target.id === 'project-modal') hideProjectModal()" class="hidden fixed inset-0 bg-black/70 z-[100] flex items-center justify-center p-6">
+    <div onclick="event.stopImmediatePropagation()" class="bg-[#0f0f0f] border border-[#222] rounded-3xl max-w-2xl w-full p-9">
+      <div id="modal-content"></div>
+      <button onclick="hideProjectModal()" class="mt-8 text-xs text-[#666] hover:text-white">ESC 或 点击此处关闭</button>
+    </div>
+  </div>
+
   <script>
-    function initializeTailwind() {
-      document.querySelectorAll('.card').forEach(card => {
-        card.addEventListener('mouseenter', () => {
-          card.style.borderColor = '#333';
-        });
-        card.addEventListener('mouseleave', () => {
-          card.style.borderColor = '#1f1f1f';
-        });
-      });
+    function showProjectDetail(index) {
+      const projects = [
+        { name: "rjbys-workbench", role: "核心内容生产平台", desc: "人间不延迟·内容工作台。目前最成体系的项目。", potential: "极高" },
+        { name: "video-replicate", role: "视频内容复刻工具", desc: "把视频链接复刻成新视频的 Claude Code skill。", potential: "高" },
+        { name: "renjian-buyanchi-ai-kb-guide", role: "IP 知识库指南", desc: "人间不延迟 AI 知识库与方法论指南。", potential: "中" },
+        { name: "personal-site", role: "个人展示入口", desc: "当前个人站点。正在演进为本系统本身。", potential: "中" }
+      ];
+      const p = projects[index];
+      
+      document.getElementById('modal-content').innerHTML = `
+        <div class="font-semibold text-3xl tracking-tighter">${p.name}</div>
+        <div class="text-[#666] mt-1">${p.role}</div>
+        <div class="mt-6 text-lg text-[#ccc]">${p.desc}</div>
+        <div class="mt-8">
+          <div class="text-xs text-[#555] mb-2">COMPOSITION POTENTIAL</div>
+          <div class="text-emerald-400 text-2xl font-semibold">${p.potential}</div>
+        </div>
+      `;
+      document.getElementById('project-modal').classList.remove('hidden');
+      document.getElementById('project-modal').classList.add('flex');
     }
-    
-    document.addEventListener('keydown', function(e) {
-      if ((e.metaKey || e.ctrlKey) && e.key === 'k') {
-        e.preventDefault();
-        alert('Command+K 搜索功能将在下一阶段实现');
+
+    function hideProjectModal() {
+      const modal = document.getElementById('project-modal');
+      modal.classList.remove('flex');
+      modal.classList.add('hidden');
+    }
+
+    // Simple selection for explorer
+    let selected = [];
+    function toggleSelection(el, name) {
+      if (selected.includes(name)) {
+        selected = selected.filter(s => s !== name);
+        el.style.borderColor = '#222';
+        el.style.background = 'transparent';
+      } else {
+        selected.push(name);
+        el.style.borderColor = '#666';
+        el.style.background = '#1a1a1a';
       }
+      updateExplorerResult();
+    }
+
+    function updateExplorerResult() {
+      const result = document.getElementById('explorer-result');
+      if (selected.length === 0) {
+        result.innerHTML = '<span class="text-[#666]">选择 2 个以上元素查看系统建议...</span>';
+        return;
+      }
+
+      let suggestion = "";
+      if (selected.includes('rjbys-workbench') && selected.includes('video-replicate')) {
+        suggestion = "<strong>形成完整内容飞轮</strong>：深度长文 + 视频分发能力。";
+      } else {
+        suggestion = `选中的 ${selected.length} 个元素可能产生新的组合输出。`;
+      }
+      result.innerHTML = suggestion;
+    }
+
+    function showCommandPalette() {
+      alert("Command Palette 功能正在构建中... 将支持全局搜索项目、文章、工作流。");
+    }
+
+    // Smooth scroll for nav
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+      anchor.addEventListener('click', function(e) {
+        e.preventDefault();
+        const target = document.querySelector(this.getAttribute('href'));
+        if (target) target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      });
     });
 
-    window.onload = initializeTailwind;
+    // Keyboard hint
+    document.addEventListener('keydown', (e) => {
+      if ((e.metaKey || e.ctrlKey) && e.key === 'k') {
+        e.preventDefault();
+        showCommandPalette();
+      }
+    });
   </script>
 </body>
 </html>
